@@ -150,23 +150,15 @@ if ( $action ) {
 				wp_die(__('You do not have sufficient permissions to deactivate plugins for this site.'));
 
 			check_admin_referer('deactivate-plugin_' . $plugin);
-<<<<<<< HEAD
 
-=======
->>>>>>> 92818847097bb5c896b846eef1f35edb5e8082f2
 			if ( ! is_network_admin() && is_plugin_active_for_network( $plugin ) ) {
 				wp_redirect( self_admin_url("plugins.php?plugin_status=$status&paged=$page&s=$s") );
 				exit;
 			}
-<<<<<<< HEAD
 
 			deactivate_plugins( $plugin, false, is_network_admin() );
 			if ( ! is_network_admin() )
 				update_option( 'recently_activated', array( $plugin => time() ) + (array) get_option( 'recently_activated' ) );
-=======
-			deactivate_plugins($plugin);
-			update_option('recently_activated', array($plugin => time()) + (array)get_option('recently_activated'));
->>>>>>> 92818847097bb5c896b846eef1f35edb5e8082f2
 			if ( headers_sent() )
 				echo "<meta http-equiv='refresh' content='" . esc_attr( "0;url=plugins.php?deactivate=true&plugin_status=$status&paged=$page&s=$s" ) . "' />";
 			else

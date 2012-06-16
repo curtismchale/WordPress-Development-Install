@@ -942,21 +942,12 @@ function setup_userdata($for_user_id = '') {
 		return;
 	}
 
-<<<<<<< HEAD
 	$userdata   = $user;
 	$user_login = $user->user_login;
 	$user_email = $user->user_email;
 	$user_url   = $user->user_url;
 	$user_pass_md5 = md5( $user->user_pass );
 	$user_identity = $user->display_name;
-=======
-	$userdata	= $user;
-	$user_login	= $user->user_login;
-	$user_email	= $user->user_email;
-	$user_url	= $user->user_url;
-	$user_pass_md5	= md5($user->user_pass);
-	$user_identity	= $user->display_name;
->>>>>>> 92818847097bb5c896b846eef1f35edb5e8082f2
 }
 
 /**
