@@ -49,6 +49,7 @@ wp_load_translations_early();
 
 // Check for the required PHP version and for the MySQL extension or a database drop-in.
 wp_check_php_mysql_versions();
+wp_unregister_GLOBALS();
 
 // Turn register_globals off.
 wp_unregister_GLOBALS();
@@ -56,6 +57,10 @@ wp_unregister_GLOBALS();
 require_once(ABSPATH . WPINC . '/compat.php');
 require_once(ABSPATH . WPINC . '/class-wp-error.php');
 require_once(ABSPATH . WPINC . '/formatting.php');
+<<<<<<< HEAD
+=======
+wp_magic_quotes();
+>>>>>>> 92818847097bb5c896b846eef1f35edb5e8082f2
 
 // Add magic quotes and set up $_REQUEST ( $_GET + $_POST )
 wp_magic_quotes();
