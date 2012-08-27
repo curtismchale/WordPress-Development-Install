@@ -2,9 +2,9 @@
 Contributors: tollmanz, helenyhou
 Donate Link: http://wordpress.org
 Tags: debug bar, cron
-Requires at least: 3.3.1
-Tested up to: 3.3.1
-Stable tag: 0.1.1
+Requires at least: 3.4
+Tested up to: trunk
+Stable tag: 0.1.2
 
 Debug Bar Cron adds a new panel to Debug Bar that displays information about WP scheduled events.
 
@@ -42,10 +42,19 @@ Yes
 
 == Changelog ==
 
+= 0.1.2 =
+* Added indicators for missed events
+
+= 0.1.1 =
+* Readme updates
+
 = 0.1 =
 * Initial release
 
 == Upgrade Notice ==
+
+= 0.1.2 =
+Adds indicators for missed events
 
 = 0.1 =
 Initial Release
