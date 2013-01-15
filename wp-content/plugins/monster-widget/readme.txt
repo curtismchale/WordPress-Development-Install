@@ -4,7 +4,7 @@ Contributors: automattic, mfields
 Tags: widget, theme development, debug
 License: GPLv2 or later
 Requires at least: 3.2.0
-Tested up to: 3.5-beta2-22252
+Tested up to: 3.5
 Stable tag: trunk
 
 Provides a quick and easy method of adding all core widgets to a sidebar for testing purposes.
@@ -26,6 +26,14 @@ The core Menu widget provides an interface that enables you to select a custom m
 3. View your site and see that all core widgets are displayed!
 
 ==Changelog==
+
+= v0.3 - January 5th, 2013 =
+* Added test photograph by directly to the plugin. Thanks to [Rarst](http://profiles.wordpress.org/rarst) for the bug report.
+* Add a really long select element to the text widget. See [_s issue #99](https://github.com/Automattic/_s/pull/99).
+* Add a smiley to the image caption.
+* Remove the "pipe test".
+* Bump version number.
+* Update Changelog.
 
 = v0.2 - October 18th, 2012 =
 * Create custom cache key for the Recent Posts widget.
@@ -53,3 +61,9 @@ It can also be installed manually.
 3. Log into WordPress and navigate to the "Plugins" screen.
 4. Locate "Monster Widget" in the list and click the "Activate" link.
 5. Navigate to Appearance &rarr; Widgets and [create a new instance](http://codex.wordpress.org/WordPress_Widgets#Activate_Widgets).
+
+==Frequently Asked Questions==
+
+= Why was the pipe test removed in version 0.3 =
+
+A couple members of the Theme Team at Automattic had a discussion about the relevance of this test and we came to the conclusion that it is rather unnatural. Moving forward it would be best to only include markup and data that best represent actual use cases.

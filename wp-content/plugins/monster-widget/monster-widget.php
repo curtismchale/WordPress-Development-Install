@@ -2,7 +2,7 @@
 /*
 Plugin Name:       Monster Widget
 Description:       A widget that allows for quick and easy testing of multiple widgets. Not intended for production use.
-Version:           0.2
+Version:           0.3
 Author:            Automattic
 Author URI:        http://automattic.com/
 License:           GPLv2 or later
@@ -261,19 +261,26 @@ class Monster_Widget extends WP_Widget {
 		$html = array();
 
 		$html[] = '<strong>' . __( 'Large image: Hand Coded', 'monster-widget' ) . '</strong>';
-		$html[] = '<img src="http://wpthemetestdata.files.wordpress.com/2008/09/test-image-landscape-900.jpg">';
+		$html[] = '<img src="' . esc_url( plugin_dir_url( __FILE__ ) . 'images/bikes.jpg' ) . '">';
 
 		$html[] = '<strong>' . __( 'Large image: linked in a caption', 'monster-widget' ) . '</strong>';
-		$html[] = '<div class="wp-caption alignnone"><a href="#"><img src="http://wpthemetestdata.files.wordpress.com/2008/09/test-image-landscape-900.jpg" class="size-large" height="598" width="900"></a><p class="wp-caption-text">' . __( 'This image is 900 by 598 pixels.', 'monster-widget' ) . '</p></div>';
+		$html[] = '<div class="wp-caption alignnone"><a href="#"><img src="' . esc_url( plugin_dir_url( __FILE__ ) . 'images/bikes.jpg' ) . '" class="size-large" height="720" width="960"></a><p class="wp-caption-text">' . __( 'This image is 960 by 720 pixels.', 'monster-widget' ) . ' ' . convert_smilies( ':)' ) . '</p></div>';
 
 		$html[] = '<strong>' . __( 'Meat!', 'monster-widget' ) . '</strong>';
 		$html[] = __( 'Hamburger fatback andouille, ball tip bacon t-bone turkey tenderloin. Ball tip shank pig, t-bone turducken prosciutto ground round rump bacon pork chop short loin turkey. Pancetta ball tip salami, hamburger t-bone capicola turkey ham hock pork belly tri-tip. Biltong bresaola tail, shoulder sausage turkey cow pork chop fatback. Turkey pork pig bacon short loin meatloaf, chicken ham hock flank andouille tenderloin shank rump filet mignon. Shoulder frankfurter shankle pancetta. Jowl andouille short ribs swine venison, pork loin pork chop meatball jerky filet mignon shoulder tenderloin chicken pork.', 'monster-widget' );
 
-		$html[] = '<strong>' . __( 'Pipe Test', 'monster-widget' ) . '</strong>';
-		$html[] = '||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||';
-
 		$html[] = '<strong>' . __( 'Smile!', 'monster-widget' ) . '</strong>';
 		$html[] = convert_smilies( ';)' ) . ' ' . convert_smilies( ':)' ) . ' ' . convert_smilies( ':-D' );
+
+		$html[] = '<strong>' . __( 'Select Element with long value', 'monster-widget' ) . '</strong>';
+
+		$html[] = '<form method="get" action="">';
+		$html[] = '<select name="monster-widget-just-testing">';
+		$html[] = '<option value="0">' . __( 'First', 'monster-widget' ) . '</opiton>';
+		$html[] = '<option value="1">' . __( 'Second', 'monster-widget' ) . '</opiton>';
+		$html[] = '<option value="2">' . __( 'Third', 'monster-widget' ) . ' OMG! How can one option contain soooo many words? This really is a lot of words.</opiton>';
+		$html[] = '</select>';
+		$html[] = '</form>';
 
 		$html = implode( "\n", $html );
 
